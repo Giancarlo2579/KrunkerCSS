@@ -1,0 +1,694 @@
+/*font*/
+
+@font-face {
+    font-family: gamefont;
+    src: url(./fonts/font2.ttf)
+}
+
+* {
+    outline: none;
+    font-family: gamefont;
+    color: var(--accent);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+:root {
+        --text-color: #fff;
+		  --accent: blue;
+		  --text-color: var(--accent);
+        --health-color: white;
+        --ammo-color: white;
+        --menu-bg-color: #333;
+        --menu-bg-color-secondary: rgba(19, 18, 18, 0.774);
+        --ingame-bg-color: rgba(0, 0, 0, 0.281);
+        --text-transform: lowercase;
+    }
+	 
+/* 1: menu */
+
+/* chat */
+
+#chatHolder {
+	bottom: 20px !important;
+	left: 20px !important;
+}
+
+/* actual menu */ 
+
+.serverHeader {
+	background-color: transparent!important;
+}
+
+#hostMenuBtn {
+	display: none!important;
+}
+
+#pingDisplay,#fpsDisplay,#ingressDisplay,#egressDisplay {
+    font-size: 18px;
+    vertical-align: top;
+	 display: block;
+    color: rgba(255,255,255,.5)
+}
+
+#pingText,#ingressPacketCount,#ingressDataSize,#egressPacketCount,#egressDataSize {
+    font-size: 18px;
+    vertical-align: top;
+    color: rgba(255,255,255,.5)
+	 display: block;
+}
+.floatR {
+    float: right;
+    color: var(--accent)!important;
+    clear: both;
+}
+
+#claimPop {
+    background-color: var(--menu-bg-color)!important;
+}
+
+
+#menuItemContainer {
+	width: fit-content;
+	height: min-content;
+	top: unset;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	flex-direction: row;
+}
+
+.menuItem {
+	align-items: center;
+	background: transparent;
+	padding-bottom: 5px;
+	padding-left: 22px;
+	padding-right: 22px;
+	pointer-events: none;
+	color: var(--accent)!important;
+}
+
+.menuItem:hover {
+    border-left: 0px;
+}
+
+.menuItemTitle:hover {
+    color: var(--accent)!important;
+}
+
+.menuItem:active {
+	background: transparent;
+	color: white;
+}
+
+.menuItem .menuItemTitle {
+	margin-top: 0;
+	color: var(--accent-color) !important;
+	font-size: 18px !important;
+	text-transform: var(--text-transform);
+	pointer-events: all;
+	transition: all .2s;
+}
+
+.menuItemTitle:hover {
+	color:  white!important;
+}
+
+.menuItemTitle:active {
+	color:  var(--accent)!important;
+}
+
+.menuItem .menuItemIcon {
+	position: relative;
+	width: 100%;
+	height: 45%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: none;
+}
+
+/* buttons */
+
+#customizeButton .material-icons{
+    display: none
+}
+
+.buttonB {
+    box-shadow: none!important
+}
+
+.buttonB:hover {
+    background-color: #fff!important;
+    box-shadow: none!important
+}
+
+.button {
+	background-color: transparent !important;
+	color: var(--accent-color) !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	text-transform: var(--text-transform);
+}
+
+.button:hover {
+	background-color: transparent !important;
+	color: #fff !important;
+	-webkit-transform: none;
+	transform: none;
+}
+
+.button.small {
+	font-size: 18px !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.button.small:hover {
+	background-color: transparent !important;
+}
+
+.buttonPI {
+	box-shadow: none !important;
+}
+
+.buttonPI:hover {
+	box-shadow: none !important;
+}
+
+.buttonR {
+	box-shadow: none !important;
+}
+
+.buttonR:hover {
+	box-shadow: none !important;
+}
+
+.buttonP {
+	box-shadow: none !important;
+}
+
+.buttonP:hover {
+	box-shadow: none !important;
+}
+
+.buttonG {
+	box-shadow: none !important;
+}
+
+.buttonG:hover {
+	box-shadow: none !important;
+}
+
+.button.lgn {
+	position: absolute;
+	left: 0;
+	width: max-content !important;
+	padding-left: 22px !important;
+	margin-left: 8px !important;
+	font-size: 18px !important;
+}
+
+.button.lgn .material-icons {
+	display: none;
+}
+
+#subLogoButtons {
+	bottom: 80px;
+	transform: translateX(-50%);
+}
+
+/* settings */
+
+.settingsBtn {
+	background: transparent;
+	color: var(--accent);
+}
+
+.inputGrey2 {
+    border: none;
+    background: var(--menu-bg-color);
+    padding: 6px;
+    padding-bottom: 6px;
+    float: right;
+    margin-left: 10px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+#menuWindow {
+    background-color: var(--menu-bg-color);
+    box-shadow: none;
+    border-radius: 0px;
+}
+	 
+.settingsHeader {
+	background: transparent;
+}
+
+
+/* 2: in-game */
+
+/* end card */
+
+.endTableN {
+    color: var(--accent-color);
+}
+
+.endCard {
+	left: 50% !important;
+	background-color: var(--menu-bg-color);
+	border-radius: 0;
+}
+
+#tabHolder {
+	border-radius: 0;
+	background-color: transparent;
+}
+
+.tabHeader {
+	color: var(--accent-color);
+}
+
+.tabHeader:hover {
+	color: #fff;
+	border-bottom: none;
+}
+
+.tabHeader.selected {
+	color: #fff;
+	border-bottom: none;
+}
+
+.endSection {
+	background-color: transparent;
+}
+
+.gfSection {
+	background-color: transparent;
+}
+
+.modeStatus {
+	color: var(--accent-color) !important;
+}
+
+.fundsVal {
+	color: #fff;
+}
+
+#kdLayout {
+	background-color: transparent;
+	border: none;
+}
+
+.crStat {
+	background-color: transparent;
+	border: none;
+}
+
+.crLabel {
+	color: #fff;
+}
+
+.crVal {
+	color: var(--accent);
+}
+
+.xpRnk {
+	width: 0;
+}
+
+.xpLvl {
+	color: #fff;
+}
+
+.xpEndBar {
+	border-radius: 0;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.xpEndBarB {
+	background-color: var(--accent);
+}
+
+.xpEndBarV {
+	text-shadow: none;
+	top: 10px;
+}
+
+#medalTable {
+	background-color: transparent;
+}
+
+/* hud ^-^ */
+
+#hudClassIcon {
+	display: none;
+}
+
+#healthValueHolder {
+	background-color: transparent;
+	width: 100px;
+	height: 65px;
+	border-radius: 0;
+	position: fixed;
+	left: 30%;
+	bottom: 25%;
+	padding: 0;
+	margin-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+	align-items: center;
+}
+
+#healthValue {
+	color: var(--health-color);
+	font-size: 48px;
+	text-align: center;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+	margin-top: 0;
+	will-change: unset;
+}
+
+#maxHP {
+	display: none;
+}
+
+#challIcon {
+	display: none !important;
+}
+
+#healthBar {
+	display: none;
+}
+
+#ammoDisplay {
+	background-color: transparent;
+	letter-spacing: 0;
+	width: 100px;
+	height: 65px;
+	border-radius: 0;
+	position: fixed;
+	right: 31%;
+	bottom: 25%;
+	padding: 0;
+	padding-top: 0;
+	padding-left: 0;
+	transform: none;
+}
+
+#ammoVal {
+	color: var(--ammo-color);
+	font-size: 48px;
+	margin-left: 12px;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#ammoMax {
+	display: none;
+}
+
+#ammoIcon {
+	display: none;
+}
+
+#reloadMsg {
+    background: none;
+	 top: -30%;
+    color: var(--accent);
+}
+
+/*Weapon Display*/
+
+##weapDisplay {
+	display: flex !important;
+	flex-direction: row !important;
+	bottom: 30px;
+	right: 50%;
+	transform: translateX(50%);
+}
+
+.weapItem {
+	margin-top: 0;
+}
+
+.weapKey {
+	display: none;
+}
+
+.weapIcon {
+	width: 100px;
+	height: 50px
+}
+
+/* other hud elements */
+
+#reloadMsg {
+    background: transparent !important;
+}
+
+#weapDisplay {
+    display: none !important;
+}
+
+/* ping and fps */
+
+#fpsDisplay {
+	visibility: hidden;
+}
+
+#ingameFPS {
+	color: #fff !important;
+	visibility: visible;
+}
+
+#pingText {
+	color: #fff !important;
+}
+
+#pingIcon {
+	color: var(--accent-color) !important;
+}
+
+#pingDisplay .material-icons {
+	font-size: 20px;
+}
+
+/* timers */
+
+#timerDisplay {
+    text-align: center;
+    position: fixed;
+    transform: translateX(-50%);
+    top: 80%;
+    left: 50%;
+    padding: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: transparent;
+    will-change: unset;
+}
+
+#timerVal {
+    font-size: 36px;
+    padding-left: 0;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+    will-change: unset;
+}
+
+#timerIcon {
+    display: none;
+}
+
+/* 3: buttons and bars */
+
+/* xp bars */
+
+.chalXPBar {
+    height: 20px;
+    background-color: var(--menu-bg-color-secondary);
+    padding: 0;
+    border-radius: 8px;
+}
+
+.chalXPBarC {
+    height: 20px;
+    background-color: var(--accent);
+    border-radius: 8px;
+}
+
+.chalProg {
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+#limitedBarProg {
+    background-color: var(--accent);
+    height: 35px;
+}
+
+.progressBarInner {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+.xpBarB {
+    height: 100%;
+    background-color: var(--accent);
+}
+
+.clsXPBarC {
+    margin: 4px;
+    background-color: var(--accent);
+    height: 18px;
+}
+
+/* sliders */
+
+.sliderM::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 25px;
+    border-radius: 4px;
+    background: var(--accent);
+    cursor: pointer
+}
+
+.subPassChg {
+    background-color: var(--accent);
+}
+
+.hostPresetBtn {
+	background: var(--accent);
+}
+
+input:checked+.optCheck {
+    background-color: var(--accent);
+}
+
+.accountButton {
+	background: var(--accent)!important;
+}
+
+.premiumSkinCol {
+	color: var(--accent)!important;
+}
+
+#menuMiniProfilePic {
+    display: none;
+}
+
+.loadoutBtn {
+    background-color: var(--accent);
+}
+
+input:checked+.slider {
+    background-color: var(--accent);
+}
+
+.quickJoin {
+	background-color: var(--accent)!important;
+}
+
+.sliderVal {
+    float: right;
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    color: #fff;
+    line-height: 24px;
+    font-size: 18px;
+    text-align: center;
+    background: var(--accent)!important;
+    padding: 5px 10px;
+    margin-left: 8px;
+    margin-right: -10px;
+    border-radius: 6px;
+}
+
+/* loading */
+
+#uiBase.onMenu #instructions {
+    display: none;
+} 
+
+#instructions {
+   animation:none;
+	color: var(--accent);
+}
+
+/* links */
+
+a {
+    cursor: pointer;
+    text-shadow: none;
+    color: var(--accent);
+    text-decoration: none;
+    pointer-events: all;
+}
+
+/* removal */
+
+#mainLogo, #seasonLabel,
+.headerBar,
+#tlInfHold,
+#mapInfoHolder,
+#aMerger,
+#newsHolder,
+#youNewDiv,
+#onetrust-consent-sdk,
+.weapKey,
+#aHolder,
+.imageButton,
+#editorBtnM,
+.headerBarRight .verticalSeparator,
+#seasonLabel,
+.krSocial,
+#mailCount,
+#uiBase.onMenu #voiceDisplay,
+#bubbleContainer,
+.endAHolder,
+#igXPBar,
+.button.small.buttonO img{
+    display: none!important;
+}
+
+#voiceDisplay {
+    display: none;
+}
+
+/* ldbrd */
+
+.leaderName {
+    color: var(--accent);
+}
+
+.newLeaderContainer {
+    border-radius: 10px;
+    background-color: var(--ingame-bg-color);
+}
+
+.newLeaderName,
+.newLeaderNameM,
+.newLeaderNameF {
+    color: var(--accent);
+}
+
+/* ads -_- */
+
+#aContainer, #aHolder, #endAContainer, #aMerger {
+  display: none!important;
+ }
